@@ -7,7 +7,7 @@
 		"url": "https://github.com/kirishu/md2singlehtml.git"
 	  },
 	"description": "This extension converts Markdown file to SingleHtml.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
@@ -48,6 +48,16 @@
 					"type": "string",
 					"default": "",
 					"description": "Output Directory."
+				},
+				"md2singlehtml.generateToc": {
+					"type": "boolean",
+					"default": true,
+					"description": "Generate auto TOC"
+				},
+				"md2singlehtml.styleSheet": {
+					"type": "string",
+					"default": "",
+					"description": "The stylesheet to use from the Md2singlehtml."
 				}
 			}
 		}
