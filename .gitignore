@@ -1,7 +1,9 @@
 .history
 .vscode-test
 node_modules
+package-lock.json
 work/**
 *.vsix
 *.bat
 .eslintrc.json
+@nogit

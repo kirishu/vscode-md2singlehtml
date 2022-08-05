@@ -7,7 +7,7 @@
 		"url": "https://github.com/kirishu/md2singlehtml.git"
 	  },
 	"description": "This extension converts Markdown file to SingleHtml.",
-	"version": "0.0.5",
+	"version": "0.0.7",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
@@ -15,14 +15,19 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.md2singlehtml.convertSingleHtml"
+		"onCommand:extension.md2singlehtml.convertSingleHtml",
+		"onCommand:extension.md2singlehtml.convertAll"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "extension.md2singlehtml.convertSingleHtml",
-				"title": "Markdown to SingleHtml: Convert SingleHtml"
+				"title": "Markdown to SingleHtml: Convert this file"
+			},
+			{
+				"command": "extension.md2singlehtml.convertAll",
+				"title": "Markdown to SingleHtml: Convert ALL files"
 			}
 		],
 		"menus": {
@@ -30,6 +35,10 @@
 				{
 					"when": "resourceLangId == markdown",
 					"command": "extension.md2singlehtml.convertSingleHtml"
+				},
+				{
+					"when": "resourceLangId == markdown",
+					"command": "extension.md2singlehtml.convertAll"
 				}
 			],
 			"editor/context": [
@@ -37,6 +46,11 @@
 					"when": "resourceLangId == markdown",
 					"command": "extension.md2singlehtml.convertSingleHtml",
 					"group": "md2singlehtml@1"
+				},
+				{
+					"when": "resourceLangId == markdown",
+					"command": "extension.md2singlehtml.convertAll",
+					"group": "md2singlehtml@2"
 				}
 			]
 		},
@@ -80,6 +94,21 @@
 	},
 	"dependencies": {
 		"axios": "^0.21.4",
-		"cheerio": "^0.20.0"
+		"cheerio": "^0.20.0",
+		"d3": "^4.13.0",
+		"emoji-images": "^0.1.1",
+		"gray-matter": "^4.0.2",
+		"highlight.js": "^9.18.1",
+		"markdown-it": "^10.0.0",
+		"markdown-it-checkbox": "^1.1.0",
+		"markdown-it-container": "^2.0.0",
+		"markdown-it-emoji": "^1.4.0",
+		"markdown-it-include": "^1.1.0",
+		"markdown-it-named-headers": "0.0.4",
+		"markdown-it-plantuml": "^1.4.1",
+		"mkdirp": "^1.0.3",
+		"mustache": "^4.0.1",
+		"puppeteer-core": "^2.1.1",
+		"rimraf": "^3.0.2"
 	}
 }
