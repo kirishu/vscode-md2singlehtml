@@ -51,8 +51,10 @@ async function convertSingleHtml() {
         vscode.window.setStatusBarMessage('');
 
         // Markdown-PDFでHTMLに変換する
+        vscode.window.showInformationMessage('');           // ←何故かこれを入れないとリリースモードでエラーになってしまう（Error: ENOENT: no such file or directory, open {ファイル名}）
         await mdpdf.convertToHtml(editor.document.uri);
         // プレーンなHTMLをSingleHTMLにする
+        vscode.window.showInformationMessage('');
         await editHtml(editor.document.uri);
 
     } catch (error) {
