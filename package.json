@@ -4,7 +4,7 @@
 	"publisher": "kirishu",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kirishu/md2singlehtml.git"
+		"url": "https://github.com/kirishu/vscode-md2singlehtml.git"
 	  },
 	"description": "This extension converts Markdown file to SingleHtml.",
 	"version": "0.0.7",
